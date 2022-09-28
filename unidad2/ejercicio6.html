@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio6</title>
+</head>
+<body>
+
+    <input type="text" id="texto" placeholder="escribe">
+    <input type="button" value="Añadir texto" onclick= "escribirdiv()">
+    <div id="div"></div>
+
+    <script type="text/javascript">
+    
+
+    function escribirdiv(){
+        var texto = document.getElementById('texto').value;
+        document.getElementById("div").innerHTML= texto;
+    }
+
+    </script>
+    
+</body>
+</html>
