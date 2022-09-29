@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1</title>
+</head>
+<body>
+
+    <input type="number" id="texto1">
+    <input type="number" id="texto2">
+    <input type="button" onclick="pulsar()" value="¿Quien es el mayor?">
+    
+    <script type="text/javascript">
+    
+    function pulsar(){
+        var texto1 = document.getElementById("texto1").value;
+        var texto2 = document.getElementById("texto2").value;
+        
+        texto1 > texto2 ? alert("el primero es mas grande"): texto1 < texto2 ? alert("el segundo es mas grande que el primero"): alert("son iguales");
+    }
+
+
+    </script>
+    
+</body>
+</html>
