@@ -14,10 +14,12 @@
 
     <script type="text/javascript">
     
+    var total = "";
 
     function escribirdiv(){
         var texto = document.getElementById('texto').value;
-        document.getElementById("div").innerHTML= texto;
+        total = total + texto + " ";
+        document.getElementById("div").innerHTML= total;
     }
 
     </script>
