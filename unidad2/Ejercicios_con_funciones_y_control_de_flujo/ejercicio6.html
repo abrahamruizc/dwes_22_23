@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio6</title>
+</head>
+<body>
+
+
+    <script type="text/javascript">
+    
+    var num1 = prompt("introduce un numero");
+    var num2 = prompt("introduce un segundo numero");
+    var num3 = prompt("introduce el tercer numero");
+
+    if ((parseFloat(num1) > parseFloat(num2) && parseFloat(num1) > parseFloat(num3))) {
+        document.write("el numero " + num1 + " es el mayor");
+    } else if((parseFloat(num1) < parseFloat(num2) && (parseFloat(num2) > parseFloat(num3)))) {
+        document.write("el numero " + num2 + " es el mayor");
+    } else {
+        document.write("el numero " + num3 + " es el mayor");
+    }
+
+    </script>
+    
+</body>
+</html>

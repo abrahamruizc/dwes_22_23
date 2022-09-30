@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2</title>
+</head>
+<body>
+
+    <input type="text" id="texto1">
+    <input type="button" onclick="pulsar()" value="insertar">
+    <ul id="lista">
+    </ul>
+
+    <script type="text/javascript">
+    
+    var total ="";
+
+    function pulsar(){
+        var texto1 = document.getElementById("texto1").value;
+        var punto = "<li>" + texto1 +"</li>";
+
+        total+= punto;
+
+        document.getElementById("lista").innerHTML = total;
+    }
+
+
+    </script>
+    
+</body>
+</html>
