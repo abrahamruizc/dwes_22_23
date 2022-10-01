@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio9</title>
+</head>
+<body>
+
+
+    <script type="text/javascript">
+
+        var numero = prompt("introduce un numero positivo de 1 o 2 digitos");
+        
+        if (parseInt(numero) <= 0 ) {
+            alert("el numero no es valido");
+        } else if(parseInt(numero) < 10){
+            alert("el numero tiene 1 digito");
+        } else if (parseInt(numero) > 99) {
+            alert("el numero no es valido, pasa de las 2 cifras")
+        } else {
+            alert("el numero tiene 2 digitos");
+        }
+        
+    </script>
+    
+</body>
+</html>
