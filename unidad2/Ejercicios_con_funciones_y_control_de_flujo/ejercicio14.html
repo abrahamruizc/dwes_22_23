@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio14</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        let cont = 0;
+
+
+        for (let x = 1; x < 201; x++) {
+            if (x % 5 == 0){
+                console.log(x);
+            }
+            if (noprimo(x)){
+                cont ++;
+            }
+        }
+
+        console.log(cont);
+
+        function noprimo(numero) {
+
+            for (let i = 2; i < numero; i++) {
+
+                if (numero % i == 0) {
+                    return true;
+                }
+
+            }
+        
+        }
+
+    </script>
+    
+</body>
+</html>
