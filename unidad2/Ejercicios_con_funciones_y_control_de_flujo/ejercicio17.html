@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio17</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+    var nombre = prompt("nombre del aspirante");
+    var npreguntas = prompt("cantidad de preguntas realizadas");
+    var preguntascorrectas = prompt("cantidad de preguntas correctas");
+
+    var porcentaje = (parseInt(preguntascorrectas) * 100) / parseInt(npreguntas);
+
+    if (porcentaje >= 90) {
+        alert("Nivel superior");
+    } else if (porcentaje >= 75){
+        alert("Nivel medio");
+    } else if (porcentaje >=50) {
+        alert("Nivel bajo");
+    } else {
+        alert("Fuera de nivel")
+    }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

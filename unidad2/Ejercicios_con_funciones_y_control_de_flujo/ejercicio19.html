@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio19</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        var mes = prompt("introduce el mes");
+        var ano = prompt("introduce el año");
+
+        switch (mes) {
+            case "enero":
+                alert("tiene 31 dias");
+                break;
+            case "febrero":
+                if (esbisiesto(parseInt(ano))){
+                    alert("tiene 29 dias");
+                } else {
+                    alert("tiene 28 dias");
+                }
+                break;
+            case "marzo":
+                alert("tiene 31 dias");
+                break;
+            case "abril":
+                alert("tiene 30 dias");
+                break;
+            case "mayo":
+                alert("tiene 31 dias");
+                break;
+            case "junio":
+                alert("tiene 30 dias");
+                break;
+            case "julio":
+                alert("tiene 31 dias");
+                break;
+            case "agosto":
+                alert("tiene 31 dias");
+                break;
+            case "septiembre":
+                alert("tiene 30 dias");
+                break;
+            case "octubre":
+                alert("tiene 31 dias");
+                break;
+            case "noviembre":
+                alert("tiene 30 dias");
+                break;
+            case "diciembre":
+                alert("tiene 31 dias");
+                break;
+            default :
+                alert("no es un mes valido");
+        }
+
+
+        function esbisiesto(numero){
+            return numero % 400 === 0 ? true : numero % 100 === 0 ? false : numero % 4 === 0;
+        }
+
+
+    </script>
+    
+</body>
+</html>

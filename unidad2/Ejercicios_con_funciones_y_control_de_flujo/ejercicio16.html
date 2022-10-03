@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio16</title>
+</head>
+<body>
+
+    <div id="div"></div>
+
+    <script type="text/javascript">
+
+        var num1 = prompt("introduce un valor");
+        var num2 = prompt("introduce un valor");
+        var num3 = prompt("introduce un valor");
+
+
+        if (parseInt(num1) == parseInt(num2) && parseInt(num2) == parseInt(num3) 
+        && parseInt(num3) == parseInt(num1)) {
+            document.getElementById("div").innerHTML = (parseInt(num1) + parseInt(num2)) * num3;
+        } else {
+            alert("no son iguales");
+        }
+
+    </script>
+    
+</body>
+</html>
