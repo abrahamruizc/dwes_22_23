@@ -15,10 +15,10 @@
 
         while (dinero > 0 && dinero < 200) {
 
-            var dineroapuesta= prompt("introduce el dinero que quieres apostar");
+            let dineroapuesta= prompt("introduce el dinero que quieres apostar");
             dinero = dinero - parseInt(dineroapuesta);
             alert("tienes: " + dinero + "$");
-            var apuestan = prompt("apuesta del 1 al 6");
+            let apuestan = prompt("apuesta del 1 al 6");
             let numero = Math.floor( Math.random() * (7 - 1) + 1);
             alert("a salido el numero: " + numero);
 
