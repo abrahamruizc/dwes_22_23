@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio23</title>
+</head>
+<body>
+
+
+    <script type="text/javascript">
+
+        var base = prompt("introduce la base imponible");
+        var iva = prompt("introduce el tipo de iva");
+        var peso = prompt("introduce el peso");
+
+        switch (iva) {
+            case "normal":
+                if (parseFloat(peso) < 1) {
+                    alert(parseFloat(base) + (base * 0.21) + 3);
+                } else if (parseFloat(peso) < 3) {
+                    alert(parseFloat(base) + (base * 0.21) + 5);
+                } else {
+                    alert(parseFloat(base) + (base * 0.21) + 10);
+                }
+                break;
+            case "reducido":
+                if (parseFloat(peso) < 1) {
+                    alert(parseFloat(base) + (base * 0.10) + 3);
+                } else if (parseFloat(peso) < 3) {
+                    alert(parseFloat(base) + (base * 0.10) + 5);
+                } else {
+                    alert(parseFloat(base) + (base * 0.10) + 10);
+                }
+                break;
+            default :
+                alert("no es un iva valido");
+        }
+
+    </script>
+    
+</body>
+</html>

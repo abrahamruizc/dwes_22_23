@@ -13,12 +13,12 @@
         var sueldo = prompt("introduce sueldo");
         var antiguedad = prompt("introduce la antiguedad");
 
-        if (parseInt(sueldo) < 1000 && parseInt(antiguedad) >=10){
-            alert(parseInt(sueldo) * 1.20);
-        } else if (parseInt(sueldo) < 1000 && parseInt(antiguedad) <10){
-            alert(parseInt(sueldo) * 1.05);
+        if (parseFloat(sueldo) < 1000 && parseInt(antiguedad) >=10){
+            alert(parseFloat(sueldo) * 1.20);
+        } else if (parseFloat(sueldo) < 1000 && parseInt(antiguedad) <10){
+            alert(parseFloat(sueldo) * 1.05);
         } else {
-            alert(parseInt(sueldo));
+            alert(parseFloat(sueldo));
         }
 
     </script>

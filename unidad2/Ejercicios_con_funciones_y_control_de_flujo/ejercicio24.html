@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio24</title>
+</head>
+<body>
+
+
+    <script type="text/javascript">
+
+        let dinero = 50;
+
+        while (dinero > 0 && dinero < 200) {
+
+            var dineroapuesta= prompt("introduce el dinero que quieres apostar");
+            dinero = dinero - parseInt(dineroapuesta);
+            alert("tienes: " + dinero + "$");
+            var apuestan = prompt("apuesta del 1 al 6");
+            let numero = Math.floor( Math.random() * (7 - 1) + 1);
+            alert("a salido el numero: " + numero);
+
+            if (parseInt(apuestan) == numero){
+                dinero += parseInt(dineroapuesta) * 2;
+                alert("acertaste ahora tienes: " + dinero + "$");
+            } 
+
+        }
+
+        alert("pierdes tienes: " + dinero + "$");
+        
+
+    </script>
+    
+</body>
+</html>

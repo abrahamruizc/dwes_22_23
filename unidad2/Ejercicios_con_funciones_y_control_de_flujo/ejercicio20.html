@@ -19,23 +19,23 @@
 
         switch (marca) {
             case "renault":
-                descuento = parseInt(precio) * 0.15;
-                alert(parseInt(precio) - descuento);
+                descuento = parseFloat(precio) * 0.15;
+                alert(parseFloat(precio) - descuento);
                 break;
             case "ford":
                 if (modelo == "fiesta") {
-                    descuento = parseInt(precio) * 0.07;
-                    alert(parseInt(precio) - descuento);
+                    descuento = parseFloat(precio) * 0.07;
+                    alert(parseFloat(precio) - descuento);
                 } else if (modelo == "focus"){
-                    descuento = parseInt(precio) * 0.10;
-                    alert(parseInt(precio) - descuento);
+                    descuento = parseFloat(precio) * 0.10;
+                    alert(parseFloat(precio) - descuento);
                 } else {
                     alert("no se admite ese modelo para ford")
                 }
                 break;
             default :
-                descuento = parseInt(precio) * 0.05;
-                alert(parseInt(precio) - descuento);
+                descuento = parseFloat(precio) * 0.05;
+                alert(parseFloat(precio) - descuento);
         }
 
 
