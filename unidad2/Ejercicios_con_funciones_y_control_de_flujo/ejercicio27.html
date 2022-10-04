@@ -16,27 +16,45 @@
         function estadisticas() {
 
             let cadena = document.getElementById("texto").value;
-            let abevedario = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            let a = 0 ,b = 0,c = 0,e = 0,f = 0,g = 0,h = 0,i = 0,j = 0,k = 0,l = 0,m = 0,
-            n = 0,o = 0,p = 0,q = 0,r = 0,s = 0,t = 0,u = 0,v = 0,w = 0,x = 0,y = 0,z = 0;
+            let nuevoarray = new Array(27);
+            let abecedario = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ','o','p','q','r','s','t','u','v','w','x','y','z'];
+            let contador;
+            let indice =0;
+            let suma = 0;
             
-            alert(y);
-
-            for (let i =0; i< cadena.length; i++){
-                for (let x =0; x< abevedario.length; x++){
-                    if (cadena[i]== abevedario[x]){
-                        if (abevedario[x] == "a"){
-
-                        }
+            for (let i =0; i <abecedario.length; i++){
+                contador=0;
+                for (let x = 0; x<cadena.length; x++){
+                    if (cadena[x] == abecedario[i]){
+                        contador++;
                     }
+                    
+                }
+                nuevoarray[indice] = contador;
+                indice++;
+            }
 
+            
+            for (let a = 0; a < abecedario.length; a++) {
+                document.write(abecedario[a] + " : " + nuevoarray[a] + "<br>");
+            }
+
+
+            for (let e = 0; e < nuevoarray.length; e++) {
+                suma += nuevoarray[e];
+            }
+
+            let porcentaje;
+
+            for (let r = 0; r < nuevoarray.length; r++) {
+                if (nuevoarray[r] != 0){
+                    porcentaje = (nuevoarray[r] / suma) * 100;
+                    document.write("El porcentaje de " + abecedario[r] + " es: "+ porcentaje + "%"+ "<br>");
                 }
             }
-            
+
 
         }
-
-
 
     </script>
     

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio28</title>
+</head>
+<body>
+
+    
+
+    <script type="text/javascript">
+
+    let fecha = prompt("introduce tu fecha de nacimiento");
+
+    let guardar = fecha.split('/');
+
+
+    switch (guardar[1]) {
+            case "01":
+                if (guardar[0] >= "01" && guardar[0] <="19") {
+                    alert("eres capricornio");
+                } else {
+                    alert("eres acuario");
+                }
+                break;
+            case "02":
+                if (guardar[0] >= "01" && guardar[0] <="18") {
+                    alert("eres acuario");
+                } else {
+                    alert("eres piscis");
+                }
+                break;
+            case "03":
+                if (guardar[0] >= "01" && guardar[0] <="20") {
+                    alert("eres piscis");
+                } else {
+                    alert("eres aries");
+                }
+                break;
+            case "04":
+                if (guardar[0] >= "01" && guardar[0] <="19") {
+                    alert("eres aries");
+                } else {
+                    alert("eres tauro");
+                }
+                break;
+            case "05":
+                if (guardar[0] >= "01" && guardar[0] <="20") {
+                    alert("eres tauro");
+                } else {
+                    alert("eres geminis");
+                }
+                break;
+            case "06":
+                if (guardar[0] >= "01" && guardar[0] <="20") {
+                    alert("eres geminis");
+                } else {
+                    alert("eres cancer");
+                }
+                break;
+            case "07":
+            if (guardar[0] >= "01" && guardar[0] <="22") {
+                    alert("eres cancer");
+                } else {
+                    alert("eres leo");
+                }
+                break;
+            case "08":
+                if (guardar[0] >= "01" && guardar[0] <="22") {
+                    alert("eres leo");
+                } else {
+                    alert("eres virgo");
+                }
+                break;
+            case "09":
+                if (guardar[0] >= "01" && guardar[0] <="22") {
+                    alert("eres virgo");
+                } else {
+                    alert("eres libra");
+                }
+                break;
+            case "10":
+                if (guardar[0] >= "01" && guardar[0] <="22") {
+                    alert("eres libra");
+                } else {
+                    alert("eres escorpio");
+                }
+                break;
+            case "11":
+                if (guardar[0] >= "01" && guardar[0] <="21") {
+                    alert("eres escorpio");
+                } else {
+                    alert("eres sagitario");
+                }
+                break;
+            case "12":
+                if (guardar[0] >= "01" && guardar[0] <="21") {
+                    alert("eres sagitario");
+                } else {
+                    alert("eres capricornio");
+                }
+                break;
+            default :
+                alert("no es un mes valido");
+        }
+
+
+
+
+    </script>
+    
+</body>
+</html>
