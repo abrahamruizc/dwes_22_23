@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio26</title>
+</head>
+<body>
+
+
+    Introduce los enteros separados por comas
+    <br>
+    <input type="text" id="texto">
+    <input type="button" onclick="pulsar()" value="Cargar Ejemplo">
+    <br>
+    <input type="button" onclick="calcular()" value="calcular">
+    <input type="button" onclick="reiniciar()" value="Reiniciar">
+    <br>
+    <div id="div"></div>
+
+    <script type="text/javascript">
+
+    
+    function pulsar(){
+        document.getElementById("texto").value = "10,10,10";
+    }
+    
+    function calcular(){
+
+        let texto =  document.getElementById("texto").value;
+        let array = texto.split(',');
+
+        let suma = 0;
+        array.forEach(element => {
+            suma+= Number(element);
+        });
+
+        media = suma / array.length;
+
+        array.sort();
+
+        document.getElementById("div").innerHTML = "suma de los elementos: "  + suma + "<br>" + 
+        "media de los elementos: "  + media +  "<br>" +"el mayor numero : " + array[array.length -1]
+        + "<br>" + "el menor numero : " + array[0]; 
+
+    }
+
+    function reiniciar(){
+        document.getElementById("div").innerHTML = "";
+        document.getElementById("texto").value = "";
+    }
+
+    </script>
+    
+</body>
+</html>
