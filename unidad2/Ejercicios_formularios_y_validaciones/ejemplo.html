@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario, validaciones</title>
+    <!-- <link rel="stylesheet" href="formularios.css"> -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>Formularios, Validaciones</h1>
+    <form id="Ej1" action="">
+        <fieldset>
+            <legend>
+                <h2>Registro</h2>
+            </legend>
+            <div class="Ej1">
+                <label for="nombre"><strong>Nombre</strong></label>
+                <input type="text" id="nombre">
+                <label for="apellido"><strong>Apellido</strong></label>
+                <input type="text" name="apellido" id="apellido">
+                <label for="email"><strong>email</strong></label>
+                <input type="text" id="email">
+                <label for="password"><strong>Password</strong></label>
+                <input type="password" name="password" id="password">
+                <label for="comentario"><strong>Comentarios</strong></label>
+                <textarea name="Comentario" id="comentario" cols="30" rows="7"></textarea>
+                <div>
+                    <label for="condiciones">Acepta las <a href="pagina_condiciones.html">condiciones</a></label>
+                    <input type="checkbox" name="condiciones" id="condiciones" />
+                </div>
+                <button type="submit" onclick="registrarUser()">Enviar</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
