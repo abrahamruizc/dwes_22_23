@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ejercicio1</title>
+    <link rel="stylesheet" href="estilo.css">
     <script src="script.js"></script>
 </head>
 
@@ -13,17 +14,22 @@
     <form id="ej1">
         <fieldset>
             <div>
-                <label for="DNI">DNI</label><input type="text" id="dni">
+                <label for="DNI">DNI</label>
+                <input type="text" id="dni">
                 <br>
-                <label for="Nombre">Nombre</label><input type="text" id="nombre">
+                <label for="Nombre">Nombre</label>
+                <input type="text" id="nombre">
                 <br>
-                <label for="Apellidos">Apellidos</label><input type="text" id="apellidos">
+                <label for="Apellidos">Apellidos</label>
+                <input type="text" id="apellidos">
                 <br>
-                <label for="Telefono">Telefono</label><input type="number" id="telefono">
+                <label for="Telefono">Telefono</label>
+                <input type="number" id="telefono">
                 <br>
-                <textarea placeholder="Escribe aquí tus comentarios" rows="6" cols="45" id="escribe"></textarea>
+                <textarea placeholder="Escribe aquí tus comentarios" rows="6" cols="45" id="escribe" maxlength="250"></textarea>
                 <br>
-                <label for="Hora">Elija una hora:</label><input type="time" id="hora">
+                <label for="Hora">Elija una hora:</label>
+                <input type="time" id="hora"><input type="submit" value="enviar" onclick="validar()" id="enviar">
             </div>
         </fieldset>
     </form>
