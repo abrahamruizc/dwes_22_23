@@ -29,9 +29,15 @@ function validar(){
         return validacion.test(nombre);
     }
 
-    function compruebaApellidos (apellido) {}
+    function compruebaApellidos (apellido) {
+        const validacion = /^(([a-zA-ZáéíóúñÑÁÉÍÓÚ]+)|([a-zA-ZáéíóúñÑÁÉÍÓÚ]+\s[a-zA-ZáéíóúñÑÁÉÍÓÚ]+))$/;
+        return validacion.test(apellido);
+    }
 
-    function compruebaTelefono (telefono) {}
+    function compruebaTelefono (telefono) {
+        const validacion = /^[+][3][4]+\s[0-9]{9}$/;
+        return validacion.test(telefono);
+    }
 
     function compruebaHora (hora) {}
 
