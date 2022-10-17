@@ -8,6 +8,7 @@
     <title>ejercicio1</title>
     <link rel="stylesheet" href="estilo.css">
     <script defer src="script.js"></script>
+    <script defer src="../cookies/cookie.js"></script>
 </head>
 
 <body>
@@ -33,6 +34,19 @@
             </div>
         </fieldset>
     </form>
+            <!--Div para Probar y Ver Cookies-->
+    <div>
+        <label>Número de Errores: </label><input type="text" id="cookies" readonly>
+        <br>
+        <input type="button" id="borrar" value="Borrar Cookies" onclick="borrarCookie()">
+        <br>
+        <input type="button" id="verCookies" value="Ver Cookies" onclick="verCookies()">
+        <br>
+        <input type="button" id="verCookies" value="Crear o Modificar Cookies" onclick="crearModifCookie()">
+        <br>
+        <input type="button" id="verCookies" value="Comprobar" onclick="comprobar()">
+    </div>
+
 </body>
 
 </html>

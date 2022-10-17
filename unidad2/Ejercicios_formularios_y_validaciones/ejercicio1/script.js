@@ -6,6 +6,8 @@ const $Telefono = document.getElementById("telefono");
 const $Escribe = document.getElementById("escribe");
 const $Hora = document.getElementById("hora");
 
+let contador = 0;
+
 function handleSubmit(e) {
   e.preventDefault();
   const dni = $DNI.value;
@@ -16,12 +18,16 @@ function handleSubmit(e) {
   const hora = $Hora.value;
 
   if (dni == false || compruebaDNI(dni) == false) {
+    contador++;
     alert("el dni no es valido");
   } else if (nombre == false || compruebaNombre(nombre) == false) {
+    contador++;
     alert("el nombre no es valido");
   } else if (apellidos == false || compruebaApellidos(apellidos) == false) {
+    contador++;
     alert("el apellido no es valido");
   } else if (telefono == false || compruebaTelefono(telefono) == false) {
+    contador++;
     alert("el telefono no es valido");
   } else {
     let registrarUsuario = {
@@ -34,7 +40,11 @@ function handleSubmit(e) {
     };
     let nuevoUsuario = JSON.stringify(registrarUsuario);
     console.log(nuevoUsuario);
+    
   }
+
+    setCookie("fallos", toString(contador), 1);
+    document.getElementById("cookies").value =  contador;
 }
 
 function compruebaDNI(dni) {
