@@ -5,8 +5,21 @@ const $Apellidos = document.getElementById("apellidos");
 const $Telefono = document.getElementById("telefono");
 const $Escribe = document.getElementById("escribe");
 const $Hora = document.getElementById("hora");
+const $Cookie = document.getElementById("cookies");
 
-let contador = 0;
+
+let contador=0;
+
+function checkCookie() {
+  let username = getCookie("fallos");
+  if (username != "") {
+    setCookie("fallos", ++contador, 1);
+  } else {
+    setCookie("fallos", 1, 1);
+  }
+  $Cookie.value = getCookie("fallos");
+}
+
 
 function handleSubmit(e) {
   e.preventDefault();
@@ -17,17 +30,15 @@ function handleSubmit(e) {
   const escribe = $Escribe.value;
   const hora = $Hora.value;
 
+  
+
   if (dni == false || compruebaDNI(dni) == false) {
-    contador++;
     alert("el dni no es valido");
   } else if (nombre == false || compruebaNombre(nombre) == false) {
-    contador++;
     alert("el nombre no es valido");
   } else if (apellidos == false || compruebaApellidos(apellidos) == false) {
-    contador++;
     alert("el apellido no es valido");
   } else if (telefono == false || compruebaTelefono(telefono) == false) {
-    contador++;
     alert("el telefono no es valido");
   } else {
     let registrarUsuario = {
@@ -42,10 +53,11 @@ function handleSubmit(e) {
     console.log(nuevoUsuario);
     
   }
-
-    setCookie("fallos", toString(contador), 1);
-    document.getElementById("cookies").value =  contador;
+    checkCookie();
+    
 }
+
+
 
 function compruebaDNI(dni) {
   const validacion = /^[0-9]{2}[.][0-9]{3}[.][0-9]{3}[-][A-Z]$/;
