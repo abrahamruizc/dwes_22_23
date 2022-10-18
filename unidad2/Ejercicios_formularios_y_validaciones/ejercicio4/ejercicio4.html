@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio4</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script defer src="script.js"></script>
+    <script defer src="../cookies/cookies.js"></script>
+</head>
+
+<body>
+    <form id="ej4">
+        <fieldset>
+            <div>
+                <p>
+                    <label>Fecha de Creación:</label>
+                    <input type="date" id="fechacrea" required>
+                </p>
+                <p>
+                    <label>Cocinero:</label>
+                    <input type="text" id="cocinero" maxlength="7">
+                </p>
+                <p>
+                    <label>Destinatario:</label>
+                    <input type="text" id="destinatario">
+                </p>
+                <p>
+                    <label>Gramos:</label>
+                    <input type="number" id="gramos" minlength="3" maxlength="4" max="5000" min="100">
+                </p>
+                <p>
+                    <label>Composicion:</label>
+                    <input type="text" id="composicion">
+                </p>
+                <p>
+                    <label>Numero de cuenta bancaria:</label>
+                    <input type="text" id="cuenta">
+                </p>
+
+            </div>
+        </fieldset>
+    </form>
+    <div>
+        <input type="button" value="Recargar" onclick="recargar()">
+    </div>
+</body>
+
+</html>

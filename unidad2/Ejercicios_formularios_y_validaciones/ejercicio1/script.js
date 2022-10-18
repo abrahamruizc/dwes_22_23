@@ -8,16 +8,18 @@ const $Hora = document.getElementById("hora");
 const $Cookie = document.getElementById("cookies");
 
 
-let contador=0;
-
 function checkCookie() {
-  let username = getCookie("fallos");
-  if (username != "") {
+  let contador = getCookie("fallos");
+  if (contador != "") {
     setCookie("fallos", ++contador, 1);
   } else {
     setCookie("fallos", 1, 1);
   }
   $Cookie.value = getCookie("fallos");
+}
+
+function reiniciarcookie(){
+  setCookie("fallos", 0, 1);
 }
 
 
