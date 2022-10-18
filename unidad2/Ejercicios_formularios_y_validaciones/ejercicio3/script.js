@@ -1,3 +1,10 @@
+if (typeof Storage !== "undefined") {
+    alert("LocalStorage compatible");
+} else {
+    alert("LocalStorage no es compatible");
+}
+
+
 const $Form = document.getElementById("ej3");
 const $DNI = document.getElementById("dni");
 const $Nombre = document.getElementById("nombre");
@@ -41,8 +48,27 @@ function handleSubmit(e) {
     };
     let nuevoUsuario = JSON.stringify(registrarUsuario);
     console.log(nuevoUsuario);
+
+    sessionStorage.setItem("dni", registrarUsuario.dni);
+    sessionStorage.setItem("nombre", registrarUsuario.nombre);
+    sessionStorage.setItem("apellidos", registrarUsuario.apellidos);
+    sessionStorage.setItem("nacimiento", registrarUsuario.nacimiento);
+    sessionStorage.setItem("email", registrarUsuario.email);
+    sessionStorage.setItem("web", registrarUsuario.web);
+    sessionStorage.setItem("contraseña", registrarUsuario.contraseña);
   }
    
+}
+
+function recargar(){
+$DNI.value = sessionStorage.getItem("dni");
+$Nombre.value = sessionStorage.getItem("nombre");
+$Apellidos.value = sessionStorage.getItem("apellidos");
+$Nacimiento.value = sessionStorage.getItem("nacimiento");
+$Email.value = sessionStorage.getItem("email");
+$Web.value = sessionStorage.getItem("web");
+$Contrasena.value = sessionStorage.getItem("contraseña");
+
 }
 
 function compruebaDNI(dni) {

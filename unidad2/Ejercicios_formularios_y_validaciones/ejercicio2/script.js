@@ -29,6 +29,11 @@ function handleSubmit(e) {
     };
     let nuevoUsuario = JSON.stringify(registrarUsuario);
     console.log(nuevoUsuario);
+
+    setCookie(registrarUsuario.nombre, registrarUsuario.nombre + " "+ registrarUsuario.apellidos, 1);
+    setCookie(registrarUsuario.email, registrarUsuario.email, 1);
+
+
   }
 }
 
