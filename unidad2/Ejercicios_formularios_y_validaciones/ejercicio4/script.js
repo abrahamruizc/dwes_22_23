@@ -149,7 +149,7 @@ function compruebacuenta(cuenta){
       
       if (calculo != parseInt(valorsuma)){
         return false;
-      } else if(penultimo != parseInt(cuenta[18]) || ultimo != parseInt(cuenta[19])) {
+      } else if(penultimo != parseInt(cuenta[cuenta.length-2]) || ultimo != parseInt(cuenta[cuenta.length-1])) {
         return false;
       } else {
         return true;
