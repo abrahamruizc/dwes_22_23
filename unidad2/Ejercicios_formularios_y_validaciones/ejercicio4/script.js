@@ -29,7 +29,8 @@ function handleSubmit(e) {
     alert("la composicion no es valida");
   } else if (cuenta == false || compruebacuenta(cuenta) == false){
     alert("la cuenta es incorrecta");
-  } else {
+  } 
+  else {
     let registrarUsuario = {
       fecha: fecha,
       cocinero: cocinero,
@@ -75,14 +76,89 @@ function compruebadestinatario(destinatario) {
 
 
 function compruebacomposicion(composicion) {
-    let ver;
     const validacion = /^[0-9]+(g)([A-Z]{1,2}[0-9]+)+$/;
-    return validacion.test(composicion);
+    let ver= String($Gramos.value);
+    let mezcla= String();
+    console.log(composicion);
+    console.log(ver);
+    for (let i= 0; i < composicion.length; i++){
+
+      if (composicion[i] == "g"){
+        console.log(composicion[i]);
+        break;
+      } else{
+        console.log(composicion[i]);
+        mezcla += composicion[i];
+      }
+      
+    }
+
+    console.log(mezcla);
+
+    if (validacion.test(composicion) && mezcla == ver) {
+      return true;
+    } else {
+      return false;
+    }
 }
 
 function compruebacuenta(cuenta){
-    const validacion = /^[a-zA-Z0-9]{8,10}$/;
-    return validacion.test(cuenta);
+    const validacion = /^[A-Z]{2}[0-9]{2}(-)[0-9]{12}(-)[0-9]{2}$/;
+    
+
+    if (validacion.test(cuenta)){
+
+      let abecedario = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+    
+      let valorLetra1 = abecedario.indexOf(cuenta[0]) +1;
+      let valorLetra2 = abecedario.indexOf(cuenta[1]) +1;
+      
+      //console.log(valorLetra1);
+      //console.log(valorLetra2);
+
+      let calculo = valorLetra1 + valorLetra2;
+      //console.log(calculo);
+
+      let valorsuma = String(cuenta[2]) + String(cuenta[3]);
+      //console.log(valorsuma);
+      
+
+      let mitad1 = 0;
+      let mitad2 = 0;
+
+      for (let i = 0; i< cuenta.length; i++){
+        if (i > 4 && i < 11) {
+          //console.log(cuenta[i]);
+          mitad1 += parseInt(cuenta[i]);
+        } 
+
+        if (i > 10 && i < 17){
+          mitad2 += parseInt(cuenta[i]);
+        }
+        
+      }
+
+      let penultimo = parseInt(mitad1 / 6);
+      let ultimo= parseInt(mitad2 / 6);
+
+      console.log(mitad1);
+      console.log(mitad2);
+      console.log(penultimo);
+      console.log(ultimo);
+
+      
+      if (calculo != parseInt(valorsuma)){
+        return false;
+      } else if(penultimo != parseInt(cuenta[18]) || ultimo != parseInt(cuenta[19])) {
+        return false;
+      } else {
+        return true;
+      }
+
+    } else {
+      return false;
+    }
+
 }
 
 $Form.addEventListener("submit", handleSubmit);
