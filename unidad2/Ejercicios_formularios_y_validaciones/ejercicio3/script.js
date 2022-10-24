@@ -49,13 +49,15 @@ function handleSubmit(e) {
     let nuevoUsuario = JSON.stringify(registrarUsuario);
     console.log(nuevoUsuario);
 
-    sessionStorage.setItem("dni", registrarUsuario.dni);
-    sessionStorage.setItem("nombre", registrarUsuario.nombre);
-    sessionStorage.setItem("apellidos", registrarUsuario.apellidos);
-    sessionStorage.setItem("nacimiento", registrarUsuario.nacimiento);
-    sessionStorage.setItem("email", registrarUsuario.email);
-    sessionStorage.setItem("web", registrarUsuario.web);
-    sessionStorage.setItem("contraseña", registrarUsuario.contraseña);
+    // sessionStorage.setItem("dni", registrarUsuario.dni);
+    // sessionStorage.setItem("nombre", registrarUsuario.nombre);
+    // sessionStorage.setItem("apellidos", registrarUsuario.apellidos);
+    // sessionStorage.setItem("nacimiento", registrarUsuario.nacimiento);
+    // sessionStorage.setItem("email", registrarUsuario.email);
+    // sessionStorage.setItem("web", registrarUsuario.web);
+    // sessionStorage.setItem("contraseña", registrarUsuario.contraseña);
+
+    sessionStorage.setItem("usuario" ,nuevoUsuario);
   }
    
 }
@@ -68,6 +70,18 @@ $Nacimiento.value = sessionStorage.getItem("nacimiento");
 $Email.value = sessionStorage.getItem("email");
 $Web.value = sessionStorage.getItem("web");
 $Contrasena.value = sessionStorage.getItem("contraseña");
+
+}
+
+
+function recargarr(){
+    var aux = JSON.parse(sessionStorage.getItem("usuario"))
+    $DNI.value= aux["dni"]
+    $Nombre.value = aux["nombre"];
+    $Nacimiento.value = aux["nacimiento"]
+    $Email.value = aux["mail"]
+    $Web.value = aux["web"]
+    $Contrasena.value = aux["contrasena"]
 
 }
 
